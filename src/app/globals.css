@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-dusty-rose: #B46F6C;
+  --color-brand-deep-rose: #8E5752;
+  --color-brand-sage: #7E8768;
+  --color-brand-deep-sage: #596047;
+  --color-brand-cream: #E8D8C1;
+  --color-brand-soft-cream: #F1E7D8;
+  --color-brand-charcoal: #24241F;
+  --color-brand-deep-charcoal: #151713;
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  :root {
+    --background: var(--color-brand-charcoal);
+    --foreground: var(--color-brand-soft-cream);
+  }
+
+  html, body {
+    background-color: var(--background);
+    color: var(--foreground);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none; /* Prevents text highlighting and caret */
+    -webkit-user-select: none;
+  }
+
+  /* Lenis smooth scroll recommended CSS */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(232, 216, 193, 0.2);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
