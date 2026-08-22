@@ -28,8 +28,8 @@ export default function AudioToggle() {
 
   return (
     <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50">
-      {/* Hidden audio element pointing to ambient.mp3 */}
-      <audio ref={audioRef} src="/ambient.mp3" loop />
+      {/* Hidden audio element pointing to kulakovka-cinematic-ambient-274889.mp3 */}
+      <audio ref={audioRef} src="/kulakovka-cinematic-ambient-274889.mp3" loop />
 
       <button
         onClick={toggleMute}
